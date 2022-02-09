@@ -1,0 +1,52 @@
+{% extends 'Base.html' %}
+{% block title %}Conatct us{% endblock title %}
+{% block body %}
+<div>
+    <div class="container marketing">
+        <div class="myClas" style="margin-top: 20px;margin-bottom:40px">
+            <h2><b><i>"An investment in knowledge pays the best interest."</b><sub>(~Benjamin Faranklin)</sub></i></h2>
+        </div>
+        <hr>
+        <center>
+            <font>
+                <h2>Contact Form</h2>
+            </font>
+        </center>
+        <div class="myClass" style="margin-top: 40px;">
+
+            <hr>
+
+            <!-- form start from here -->
+
+
+            <form class=" container row g-3" method="post" action="/ContactUs">
+                {% csrf_token %}
+                <div class="col-7">
+                    <label for="Name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter your name">
+                </div>
+                <div class="col-md-6">
+                    <label for="Email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="Email" name="Email" placeholder="abc@gamil.com">
+                </div>
+                <div class="col-md-4">
+                    <label for="PhoneNumber" class="form-label">PhoneNumber</label>
+                    <input type="phone" class="form-control" id="PhoneNumber" name="PhoneNumber"
+                        placeholder="989XXXXXXX">
+                </div>
+                <div class="col-5">
+                    <label for="Class" class="form-label">Class</label>
+                    <input type="text" class="form-control" id="Class" name="Class" placeholder="eg: 1,2,3...">
+                </div>
+                <div class="mb-3">
+                    <label for="Feedback" class="form-label"></label>
+                    <textarea class="form-control" id="Feedback" name="Feedback" rows="3"
+                        placeholder="Message"></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        {% endblock body %}
