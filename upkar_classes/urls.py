@@ -21,6 +21,6 @@ admin.site.site_title = "Upakr Class Admin Portal"
 admin.site.index_title = "Welcome to Upkar Class Portal"
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/',admin.site.urls),
     path("",include("main.urls"))
 ]
