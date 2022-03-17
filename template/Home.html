@@ -10,8 +10,8 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                {% comment %} <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" {% endcomment %}
+                    {% comment %} aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"> {% endcomment %}
                     <img src="static/img/a.jpg" width="100%" height="100%">
                 </svg>
 
@@ -26,8 +26,8 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                {% comment %} <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" {% endcomment %}
+                    {% comment %} aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"> {% endcomment %}
                     <img src="static/img/c.jpeg" width="100%" height="100%">
                 </svg>
 
@@ -42,8 +42,8 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                {% comment %} <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" {% endcomment %}
+                    {% comment %} aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"> {% endcomment %}
                     <img src="static/img/b.jpeg" width="100%" height="100%">
                 </svg>
 
@@ -65,6 +65,16 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    {% comment %} <div class="container">
+        {% if l%}
+        <hr>
+        <h3 style="color:red;">Announcements:</h3>
+        {%for x in l%}
+        <p>>{{x}}</p>
+        {% endfor %}
+        <hr>
+        {% endif %}
+    </div> {% endcomment %}
     <div class="container marketing">
         <!-- START THE FEATURETTES -->
         <h1><b>OUR COURSES</b></h1>
@@ -96,7 +106,7 @@
         </div>
         <!-- END THE FEATURETTES -->
     </div>
-    <hr class="featurette-divider">
+    <hr >
     <div class="container">
         <div class="row">
             <div class="myClass" style="margin-bottom: 70px;">
@@ -159,7 +169,6 @@
                         globally with ease to upgrade the knowledge machine of the universe and to ignite the passion
                         for education in the younger generation to redefine the term success".</i></p>
             </h6>
-            <hr>
             <h3><b>OUR VISION</b></h3>
             <h6>
                 <p><i>" To help students to achieve their academic objectives by providing innovative, best in class
@@ -167,5 +176,6 @@
                         joyful. "</i></p>
             </h6>
         </center>
-    </div </div>
+    </div >
+</div>
     {%endblock body%}
