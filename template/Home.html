@@ -12,7 +12,7 @@
             <div class="carousel-item active">
                 {% comment %} <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" {% endcomment %}
                     {% comment %} aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"> {% endcomment %}
-                    <img src="static/img/a.jpg" width="100%" height="100%">
+                    <img src="static/img/a.jpg "width="100%"height="100%">
                 </svg>
 
                 <div class="container">
@@ -65,16 +65,18 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    {% comment %} <div class="container">
+    <div>
         {% if l%}
+        <div class="container">
         <hr>
         <h3 style="color:red;">Announcements:</h3>
         {%for x in l%}
-        <p>>{{x}}</p>
+        <p style="color:black">{{x.A}}</p>
         {% endfor %}
+        </div>
         <hr>
         {% endif %}
-    </div> {% endcomment %}
+    </div>
     <div class="container marketing">
         <!-- START THE FEATURETTES -->
         <h1><b>OUR COURSES</b></h1>
@@ -90,7 +92,7 @@
                 <div class="col-lg-4">
                     <img src="static/img/X.webp" width="200" height="150">
                     <h2>BASE</h2>
-                    <p>Class IX-X are the base classes. We call them base class classes because they are made the
+                    <p>Class IX-X are called the base classes. We call them base classes because they are built
                         foundation for
                         our carrer.</p>
                     <p><a class="btn btn-dark" href="ContactUs">enroll now &raquo;</a></p>
@@ -98,7 +100,7 @@
                 <div class="col-lg-4">
                     <img src="static/img/XII.jpg" width="200" height="150">
                     <h2>STREAM</h2>
-                    <p>Class XI-XII plays the main role in our carrer. We provide education of PCM,BIO and COMM steams.
+                    <p>Class XI-XII plays the main role in our carrer. We provide education for PCM,BIO and COMM steams.
                     </p>
                     <p><a class="btn btn-dark" href="ContactUs">enroll now &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->

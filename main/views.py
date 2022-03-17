@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from main.models import Contact
+from main.models import Contact,Announcements
 from django.contrib import messages
 
 def home(request):
-    # l=["I have a template songs.html that includes a child template addToPlaylist.html. I need the title of the song that is to be added to the playlist dynamically. Here is the code for songs.html which includes addToPlaylist.html.","@Moosa I want the value of song.title that I am iterating in parent. So I can add relevant song to the playlist user chooses. song.title should be the title of song for which addToPlaylist button is clicked."]
-    return render(request,"Home.html")
+    l=Announcements.objects.all()
+    return render(request,"Home.html",{"l":l})
 def AboutUs(request):
     return render(request,"About.html")
 def ContactUs(request):
@@ -19,3 +19,5 @@ def ContactUs(request):
         contact.save()
         messages.success(request,'Our team will contact you soon...')
     return render(request,"Contact.html")
+def Resources(request):
+    return render(request, "Resources.html")

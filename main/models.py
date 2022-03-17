@@ -10,3 +10,8 @@ class Contact(models.Model):
     def __str__(self):
         return self.Name+"-/-"+self.Email
     
+class Announcements(models.Model):
+    A=models.TextField(max_length="1000")
+
+class Notes(models.Model):
+    n=models.FileField(upload_to="doc")
