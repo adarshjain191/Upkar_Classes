@@ -11,5 +11,7 @@ urlpatterns = [
     path("ContactUs",views.ContactUs,name="Contactpage"),
     path("AboutUs",views.AboutUs,name="Aboutpage"),
     path("Resources",views.Resources,name="Resources"),
-    path('admin/',admin.site.urls)
+    path('admin/',admin.site.urls),
+    path("Blog",views.Blog,name="Blog"),
+    path("review",views.review,name="review")
 ]

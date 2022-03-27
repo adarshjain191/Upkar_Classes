@@ -6,8 +6,10 @@ from django.contrib import messages
 def home(request):
     l=Announcements.objects.all()
     return render(request,"Home.html",{"l":l})
+
 def AboutUs(request):
     return render(request,"About.html")
+
 def ContactUs(request):
     if request.method=="POST":
         Name=request.POST.get("Name")
@@ -19,5 +21,12 @@ def ContactUs(request):
         contact.save()
         messages.success(request,'Our team will contact you soon...')
     return render(request,"Contact.html")
+
 def Resources(request):
     return render(request, "Resources.html")
+
+def Blog(request):
+    return render(request, "Blog.html")
+
+def review(request):
+    return render(request,"review.html")
